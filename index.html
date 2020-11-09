@@ -85,6 +85,50 @@
                 float: right;
             }
         </style>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js" ></script>
+        <script type="text/javascript">
+            $(function(){
+                
+                var mapsListData = [
+                    {
+                        mapImage: 'https://greenxpqser.github.io/Viper-Lineups/images/Loading_Screen_Split.png',
+                        mapLink: '#screen_split',
+                    }, 
+                    {
+                        mapImage: 'https://greenxpqser.github.io/Viper-Lineups/images/Loading_Screen_Haven.png',
+                        mapLink: '#screen_haven',
+                    },
+                    {
+                        mapImage: 'https://greenxpqser.github.io/Viper-Lineups/images/Loading_Screen_Bind.png',
+                        mapLink: '#screen_bind',
+                    },
+                    {
+                        mapImage: 'https://greenxpqser.github.io/Viper-Lineups/images/Loading_Screen_Ascent.png',
+                        mapLink: '#screen_ascent
+                    },
+                    {
+                        mapImage: 'https://greenxpqser.github.io/Viper-Lineups/images/Loading_Screen_Icebox.png',
+                        mapLink: '#screen_icebox
+                    }
+                ];
+                
+                var displayMaps = function(activeSched){
+                    var mapsHTML = '';
+
+                    $.each(mapsListData, function(i, val){                   
+                        mapsHTML += `
+                        <div class="card">
+                            <a href="${mapsListData[i].mapLink}">
+                                <img src="${mapsListData[i].mapImage}" />
+                            </a>                    
+                        </div> `;
+                 });
+
+                 return mapsHTML;
+               }
+               $('.cards').html(displayMaps());
+            });
+        </script>
     </head>
     <body>
         <header>
