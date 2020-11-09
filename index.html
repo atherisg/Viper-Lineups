@@ -11,7 +11,6 @@
                 font-size: 100%;
                 /* font: inherit; */
                 vertical-align: baseline;
-                zoom: 67%;
             }
             article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}
             body {line-height: 1;}
@@ -53,6 +52,13 @@
               width: 100%;
               overflow: hidden;
             }  
+            @viewport {
+             width: device-width;
+             zoom: 0.67;
+             min-zoom: 0.67;
+             max-zoom: 0.67;
+             user-zoom: fixed;
+            }
             .header-title {               
               font-size: 100px;  
               font-weight: lighter;
