@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bind</title>
+        <style>
+            /* reset CSS - do not modify */
+            html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+                margin: 0;
+                padding: 0;
+                border: 0;
+                font-size: 100%;
+                /* font: inherit; */
+                vertical-align: baseline;
+            }
+            article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}
+            body {line-height: 1;}
+            ol, ul {list-style: none;}
+            blockquote, q {quotes: none;}
+            blockquote:before, blockquote:after, q:before, q:after {
+            content: '';
+            content: none;
+            }
+            table {
+                border-collapse: collapse;
+                border-spacing: 0;
+            }
+            /* end reset css for all web browser */
+
+
+            /* Start Modifying CSS here: */
+            html {
+                height: 100%;
+            }
+            body {
+                min-height: 100%;             
+                color:#00ff00;
+                font-family: Arial, Helvetica, sans-serif;
+                background: #181818;
+                margin: 0 auto;
+                height: 100%;
+            }
+            section{
+                width: 100%;
+                height: 100%;
+                margin: 0 auto; /* to center the BOX CONTAINER  */
+                /*padding: 2px;  add padding */
+                /*outline: solid 5px red;*/
+                
+            }
+            a{
+                color: #00ff00;
+            }
+            .text-green{
+                color: green;
+            }
+            .text-yellowgreen{
+                color: yellowgreen;
+            }
+            .main{
+                display: grid; /* grid layout for easy layout-ing*/               
+                grid-template-columns: 1fr 3fr 1fr;   /* 3 Columns, fr means fraction, */
+                column-gap: 1px;                      
+            }
+            /*.column{
+                outline: solid 1px #0DBB10; 
+            }*/
+            .sidebar{
+                height: 100%;
+                width: 100%;
+                display: grid;
+                grid-template-rows: 2fr 3fr 1fr;
+            }
+            /*.sidebar div{
+                outline: solid 1px blue;
+            }
+            */
+            .map img{
+                width: 75%;
+                opacity: 0.5;
+                display: block;
+                margin: 0 auto;        
+                object-fit: cover;
+            }
+            .rows{
+                margin: 12px 0px 0px 12px;
+            }
+            .boxes{
+                margin: 12px 0px 0px 12px;
+                font-weight: 900;
+                line-height: 1.1;
+            }
+            .textNoDeco{
+                text-decoration: none;
+            }
+            .mapName{
+                font-weight: bold;
+                font-size: 42px;
+                text-decoration: underline;
+            }
+            .version{
+                font-size: 30px;
+            }
+            .legend{
+                font-size: 19px;
+                font-weight: bold;
+                width: 100%;
+                text-align: center;
+            }
+            .legend td:first{
+                text-align: center;                
+            }
+            .legend td:nth-child(2){
+                text-align: justify;
+                padding-left: 12px;
+            }
+            .tba1{
+                color: red;
+            }
+            .tba2{
+                color: darkred;
+            }
+            .lineups{
+                position: relative;
+            }
+            .lineups span{
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                padding: 0px 12px 12px 0px;
+            }
+            .box{
+                width: 94%;
+                height: 50px;
+                display: table;
+                margin-bottom: 8px;
+            }
+            .boxSplit1{
+                width: 140px;
+                height: 50px;
+                display: table;
+                margin-bottom: 8px;
+            }
+            .boxSplit2{
+                width: 130px;
+                height: 50px;
+                display: table;
+                margin-bottom: 8px;
+            }
+            .box-color1{
+                border: 4px solid #00ff00;
+            }
+            .box-color2{
+                border: 4px solid green;
+            }
+            .box-color3{
+                border: 4px solid greenyellow;
+            }
+            .parent {
+                width: 100%;
+                height: 100%;
+                display: table;
+                text-align: center;
+            }
+            .parent > .child {
+                display: table-cell;
+                vertical-align: middle;
+            }
+            .two-buttons{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+            .two-buttons span{
+                padding-left: 3px;
+                padding-right: 3px;
+            }
+        </style>        
+    </head>
+    <body>
+        <section class="main">
+            <div class="column">
+                <div class="sidebar">
+                    <div class="rows">
+                        <p class="mapName"><a href="https://greenxpqser.github.io/Viper-Lineups/">BIND</a></p>
+                        <div class="version">v1.12</div>
+                    </div>
+                    <div class="rows"></div>
+                    <div class="rows">
+                        <table class="legend">
+                            <tr>
+                                <td>◯</td>
+                                <td>One Way Smoke</td>
+                            </tr>
+                            <tr>
+                                <td>⬤</td>
+                                <td>Poison Cloud</td>
+                            </tr>
+                            <tr>
+                                <td>Х</td>
+                                <td>Snake Bite</td>
+                            </tr>
+                            <tr>
+                                <td>⛒</td>
+                                <td>Poison Cloud and Snake Bite</td>
+                            </tr>
+                            <tr>
+                                <td><span class="tba1">■</span><span class="tba2">■</span></td>
+                                <td>To Be Added</td>
+                            </tr>
+                        </table>
+                    </div>
+                 </div>
+            </div>
+            <div class="column">
+                <div class="map">
+                    <img src=https://raw.githubusercontent.com/GreenXpqser/Viper-Lineups/main/images/bind.png></img>
+                </div>
+            </div>
+            <div class="column">
+                <div class="sidebar">
+                    <div class="boxes">
+                        <div class="box box-color1">
+                            <div class="parent">
+                                <div class="child"><a class="textNoDeco">ATTACKING</a></div>
+                            </div>
+                        </div>
+                        <div class="box box-color2">
+                            <div class="parent">
+                                <div class="child"><a class="text-green"><a class="textNoDeco">DEFENDING</a></a></div>
+                            </div>
+                        </div>
+                        <div class="two-buttons">
+                            <span class="boxSplit1 box-color1">
+                                <span class="parent">
+                                    <span class="child"><a href="#">TOXIC<br>SCREEN</a></span>
+                                </span>                            
+                            </span>                            
+                            <span class="boxSplit2 box-color3">                            
+                                <span class="parent">
+                                    <span class="child"><a class="text-yellowgreen" href="#">VIPER'S<br>PIT</a></span>
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                    <div></div>
+                    <div class="rows lineups">
+                        <div><span>87 Lineups</span></div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>            
+    </body>
+</html>
