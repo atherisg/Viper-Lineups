@@ -1,1 +1,153 @@
 
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Viper Lineups</title>
+        <style>
+            /* reset CSS - do not modify */
+            html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+                margin: 0;
+                padding: 0;
+                border: 0;
+                font-size: 100%;
+                /* font: inherit; */
+                vertical-align: baseline;
+            }
+            article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}
+            body {line-height: 1;}
+            ol, ul {list-style: none;}
+            blockquote, q {quotes: none;}
+            blockquote:before, blockquote:after, q:before, q:after {
+            content: '';
+            content: none;
+            }
+            table {
+                border-collapse: collapse;
+                border-spacing: 0;
+            }
+            /* end reset css for all web browser */
+
+
+            /* Start Modifying CSS here: */
+            body{                
+                color:#00FF00;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: lighter;
+                background: black;
+                margin: 0 auto;
+                background-color: gray;
+            }
+            header{
+                display: grid;
+                grid-template-columns: 1fr 2fr 1fr;                
+                height: 100px;
+                line-height: 100px;
+                padding: 45px;
+            }
+            @viewport {
+             width: device-width;
+             zoom: 6.7;
+             min-zoom: 6.7;
+             max-zoom: 6.7;
+             user-zoom: fixed;
+            }
+            .header-title {               
+              font-size: 100px;  
+              font-weight: lighter;
+              text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black; 
+            }
+            .cards-container{
+                height: auto;
+            }
+            .cards{
+                display: grid;
+                grid-template-columns: repeat(3, minmax(300px, 1fr));   
+                margin: 0 100px;            
+            }
+            .card{
+                background-color: rgb(17, 85, 17);
+                color: white;                
+                outline:  solid 2px #00FF00; 
+            }
+            .card img{
+                display: block;
+                width: 100%;        
+                height: 300px;                
+                object-fit: cover;
+            }
+            .footer-contents{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                margin: 100px 20px;                 
+            }
+            .footer-contents span{
+                float: right;
+            }
+        </style>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js" ></script>
+        <script type="text/javascript">
+            $(function(){
+                
+                var mapsListData = [
+                    {
+                        mapImage: 'https://greenxpqser.github.io/Viper-Lineups/images/Loading_Screen_Split.png',
+                        mapLink: '#screen_split',
+                    }, 
+                    {
+                        mapImage: 'https://greenxpqser.github.io/Viper-Lineups/images/Loading_Screen_Haven.png',
+                        mapLink: '#screen_haven',
+                    },
+                    {
+                        mapImage: 'https://greenxpqser.github.io/Viper-Lineups/images/Loading_Screen_Bind.png',
+                        mapLink: '#screen_bind',
+                    },
+                    {
+                        mapImage: 'https://greenxpqser.github.io/Viper-Lineups/images/Loading_Screen_Ascent.png',
+                        mapLink: '#screen_ascent',
+                    },
+                    {
+                        mapImage: 'https://greenxpqser.github.io/Viper-Lineups/images/Loading_Screen_Icebox.png',
+                        mapLink: '#screen_icebox',
+                    },
+                    {
+                        mapImage: 'https://greenxpqser.github.io/Viper-Lineups/images/Loading_Screen_Placeholder.png',
+                        mapLink: '#screen_placeholder',
+                    }
+                ];
+                
+                var displayMaps = function(activeSched){
+                    var mapsHTML = '';
+
+                    $.each(mapsListData, function(i, val){                   
+                        mapsHTML += `
+                        <div class="card">
+                            <a href="${mapsListData[i].mapLink}">
+                                <img src="${mapsListData[i].mapImage}" />
+                            </a>                    
+                        </div> `;
+                 });
+
+                 return mapsHTML;
+               }
+               $('.cards').html(displayMaps());
+            });
+        </script>
+    </head>
+    <body>
+        <header>
+            <span></span>
+            <center><span class="header-title">Viper Lineups</span></center>
+            <span>v1.3</span>
+        </header>
+        <section class="cards-container">
+            <div class="cards">
+            </div>
+        </section>
+        <footer>    
+            <div class="footer-contents">
+                <div>Note: All lineups are made in a 16:9 screen resolution</div>
+                <div><span>By Atheris</span></div>
+            </div>            
+        </footer>        
+    </body>
+</html>
