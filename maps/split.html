@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Viper Lineups</title>
+        <title>Split</title>
         <style>
             /* reset CSS - do not modify */
             html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
@@ -35,7 +35,7 @@
                 font-weight: lighter;
                 background: black;
                 margin: 0 auto;
-                background-color: gray;
+                background-color: #383838;
             }
             header{
                 display: grid;
@@ -84,69 +84,20 @@
                 float: right;
             }
         </style>
-        <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js" ></script>
-        <script type="text/javascript">
-            $(function(){
-                
-                var mapsListData = [
-                    {
-                        mapImage: 'https://greenxpqser.github.io/Viper-Lineups/images/Loading_Screen_Split.png',
-                        mapLink: '#screen_split',
-                    }, 
-                    {
-                        mapImage: 'https://greenxpqser.github.io/Viper-Lineups/images/Loading_Screen_Haven.png',
-                        mapLink: '#screen_haven',
-                    },
-                    {
-                        mapImage: 'https://greenxpqser.github.io/Viper-Lineups/images/Loading_Screen_Bind.png',
-                        mapLink: '#screen_bind',
-                    },
-                    {
-                        mapImage: 'https://greenxpqser.github.io/Viper-Lineups/images/Loading_Screen_Ascent.png',
-                        mapLink: '#screen_ascent',
-                    },
-                    {
-                        mapImage: 'https://greenxpqser.github.io/Viper-Lineups/images/Loading_Screen_Icebox.png',
-                        mapLink: '#screen_icebox',
-                    },
-                    {
-                        mapImage: 'https://greenxpqser.github.io/Viper-Lineups/images/Loading_Screen_Placeholder.png',
-                        mapLink: '#screen_placeholder',
-                    }
-                ];
-                
-                var displayMaps = function(activeSched){
-                    var mapsHTML = '';
-
-                    $.each(mapsListData, function(i, val){                   
-                        mapsHTML += `
-                        <div class="card">
-                            <a href="${mapsListData[i].mapLink}">
-                                <img src="${mapsListData[i].mapImage}" />
-                            </a>                    
-                        </div> `;
-                 });
-
-                 return mapsHTML;
-               }
-               $('.cards').html(displayMaps());
-            });
-        </script>
     </head>
     <body>
         <header>
-            <span></span>
-            <center><span class="header-title">Viper Lineups</span></center>
-            <span>v1.3</span>
         </header>
         <section class="cards-container">
             <div class="cards">
+                  <map name="map">
+                     <area shape="circle" coords="46,441,12" title="N">
+                  </map>
+                <img src="https://greenxpqser.github.io/Viper-Lineups/images/split.png" usemap="#map">
             </div>
         </section>
         <footer>    
             <div class="footer-contents">
-                <div>Note: All lineups are made in a 16:9 screen resolution</div>
-                <div><span>By Atheris</span></div>
             </div>            
         </footer>        
     </body>
