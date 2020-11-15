@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title></title>
+        <title>Split</title>
         <style> 
         body{                
-                color:#00FF00;
-                font-family: Arial, Helvetica, sans-serif;
-                font-weight: lighter;
-                background: black;
-                margin: 0 auto;
-                min-height: 100%;
-                height: 100%;
+            color:#00FF00;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: lighter;
+            background: #181818;
+            margin: 0 auto;
+            min-height: 100%;
+            height: 100%;
+            padding: 12px;
+        }
+        .staticText{
+            font-weight: 700;
+            font-size: 20px;
+        }
+        .whiteText{
+            color:white;
         }
         .div-table-one{
             display: grid;
@@ -19,30 +27,38 @@
         .div-tblone-row-one{
             display: grid;
             grid-template-columns: 1fr 1fr 4fr 2fr;
-            
         }
         .div-tblone-row-one div{ 
-            outline: solid 1px black;
+            outline: solid 1px rgb(255, 255, 255);
             height: 50px;
         }
         .div-tblone-row-one div:last-child{ 
-            outline: solid 5px orange;
+            outline: solid 1px rgb(255, 255, 255);
             height: 50px;
         }
         .div-tblone-row-two{ 
             display: grid;
             grid-template-columns: 2fr 4fr 2fr;
         }
-        .div-tblone-row-two div{ 
-            outline: solid 1px red; /* I added outline to hel visualize */
-        }
-
+        /*.div-tblone-row-two div{ 
+            outline: solid 1px rgb(255, 255, 255);
+        }*/
         .bordered-box{
-            border: 2px solid blue;
+            border: 1px solid rgb(255, 255, 255);
         }
         .div-tblone-row-two img{ 
-            max-width: 300px; /* add max width for image */
+            max-width: 400px; /* add max width for image */
         }
+        .parent {
+                width: 100%;
+                height: 100%;
+                display: table;
+                text-align: center;
+            }
+            .parent > .child {
+                display: table-cell;
+                vertical-align: middle;
+            }
 
 
         </style>
@@ -52,16 +68,26 @@
             <div class="div-table-one">
                 <!-- row one -->
                 <div class="div-tblone-row-one">
-                    <div>map name</div>
-                    <div>atk / def</div>
-                    <div>lineup name</div>
-                    <div>pros and cons</div>
+                    <div class="staticText parent">
+                        <div class="child">SPLIT</div>
+                    </div>
+                    <div class="staticText parent whiteText">
+                        <div class="child">ATK/DEF</div>
+                    </div>
+                    <div class="staticText parent whiteText">
+                        <div class="child">LINEUP NAME</div>
+                    </div>
+                    <div class="staticText parent whiteText">
+                        <div class="child">PROS AND CONS</div>
+                    </div>
                 </div>
 
                 <!-- row two -->      
                 <div class="div-tblone-row-two">
                    <div>
-                       <div class="bordered-box">positioning</div>
+                       <div class="bordered-box staticText parent whiteText">
+                           <div class="child">POSITIONING</div>
+                        </div>
                     </div> 
                    <div>
                        <img src="https://greenxpqser.github.io/Viper-Lineups/images/Loading_Screen_Split.png" />
