@@ -1,147 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
     <head>
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="shortcut icon" type="image/png" href="images/favicon.ico" />
+        <meta charset="utf-8" />
         <title>Viper Lineups</title>
-        <style>
-            /* reset CSS - do not modify */
-            html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-                margin: 0;
-                padding: 0;
-                border: 0;
-                font-size: 100%;
-                /* font: inherit; */
-                vertical-align: baseline;
-            }
-            article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}
-            body {line-height: 1;}
-            ol, ul {list-style: none;}
-            blockquote, q {quotes: none;}
-            blockquote:before, blockquote:after, q:before, q:after {
-            content: '';
-            content: none;
-            }
-            table {
-                border-collapse: collapse;
-                border-spacing: 0;
-            }
-            /* end reset css for all web browser */
-
-
-            /* Start Modifying CSS here: */
-            body{                
-                color:#00FF00;
-                font-family: Arial, Helvetica, sans-serif;
-                font-weight: lighter;
-                background: black;
-                margin: 0 auto;
-                background-image: url('https://raw.githubusercontent.com/GreenXpqser/Viper-Lineups/main/images/background.jpg');
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-position: 50% 0;
-                min-height: 100%;
-                height: 100%;
-            }
-            header{
-                display: grid;
-                grid-template-columns: 1fr 2fr 1fr;                
-                height: 100px;
-                line-height: 100px;
-                padding: 25px;
-            }
-            .header-title {               
-              font-size: 100px;  
-              text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
-            }
-            .cards-container{
-                width: 100%;
-            }
-            .cards{
-                display: grid;
-                grid-template-columns: repeat(3, minmax(250px, 1fr));   
-                margin: 0 100px;            
-            }
-            .card{
-                background-color: lightgray;  
-                outline:  solid 2px #00FF00; 
-                text-align: center;
-                position: relative;
-            }
-            .card img{
-                display: block;
-                width: 100%;        
-                height: auto;                
-                object-fit: cover;
-            }
-            .mapImage {
-                opacity: 1;
-            }
-            .footer-contents{
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                margin: 50px 20px 20px;                 
-            }
-            .footer-contents span{
-                float: right;
-            }
-            .imageHover {
-                position: relative;
-            }
-            .mapName {
-                color: #00ff00;
-                font-size: 50px;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                visibility: hidden;
-                opacity: 0;
-                transform: translate(-50%, -50%);
-                text-shadow: 2px 2px 4px #000000;
-                transition: opacity .2s, visibility .2s;
-            }
-            .imageHover:hover .mapName {
-                visibility: visible;
-                opacity: 1;
-            }
-            .imageHover:hover img{
-                opacity: 0.5;
-            }
-        </style>
-        <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js" ></script>
+        <!-- JQuery script -->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         <script type="text/javascript">
             $(function(){
-                
+
+                //declare an array
                 var mapsListData = [
                     {
-                        mapImage: 'https://raw.githubusercontent.com/GreenXpqser/Viper-Lineups/main/images/Loading_Screen_Split.png',
-                        mapLink: 'https://greenxpqser.github.io/Viper-Lineups/maps/split.html',
+                        mapImage: 'images/Loading_Screen_Split.png',
+                        mapLink: 'maps/split.html',
                         mapName: "Split",
-                    }, 
+                    },
                     {
-                        mapImage: 'https://raw.githubusercontent.com/GreenXpqser/Viper-Lineups/main/images/Loading_Screen_Haven.png',
-                        mapLink: 'https://greenxpqser.github.io/Viper-Lineups/maps/haven.html',
+                        mapImage: 'images/Loading_Screen_Haven.png',
+                        mapLink: 'maps/haven.html',
                         mapName: "Haven",
                     },
                     {
-                        mapImage: 'https://raw.githubusercontent.com/GreenXpqser/Viper-Lineups/main/images/Loading_Screen_Bind.png',
-                        mapLink: 'https://greenxpqser.github.io/Viper-Lineups/maps/bind.html',
+                        mapImage: 'images/Loading_Screen_Bind.png',
+                        mapLink: 'maps/bind.html',
                         mapName: "Bind",
                     },
                     {
-                        mapImage: 'https://raw.githubusercontent.com/GreenXpqser/Viper-Lineups/main/images/Loading_Screen_Ascent.png',
-                        mapLink: 'https://greenxpqser.github.io/Viper-Lineups/maps/ascent.html',
+                        mapImage: 'images/Loading_Screen_Ascent.png',
+                        mapLink: 'maps/ascent.html',
                         mapName: "Ascent",
                     },
                     {
-                        mapImage: 'https://raw.githubusercontent.com/GreenXpqser/Viper-Lineups/main/images/Loading_Screen_Icebox.png',
-                        mapLink: 'https://greenxpqser.github.io/Viper-Lineups/maps/icebox.html',
+                        mapImage: 'images/Loading_Screen_Icebox.png',
+                        mapLink: 'maps/icebox.html',
                         mapName: "Icebox",
+                    },
+                    {
+                        mapImage: 'images/Loading_Screen_Breeze.png',
+                        mapLink: 'maps/Breeze.html',
+                        mapName: "Breeze",
                     }
                 ];
-                
+
+
                 var displayMaps = function(activeSched){
                     var mapsHTML = '';
 
-                    $.each(mapsListData, function(i, val){                   
+                    // for every map, display each
+                    $.each(mapsListData, function(i, val){
                         mapsHTML += `
                         <div class="card">
                             <div class="imageHover">
@@ -149,14 +57,18 @@
                                     <img class="mapImage" src="${mapsListData[i].mapImage}"/>
                                     <div class="mapName">${mapsListData[i].mapName}</div>
                                 </a>
-                            </div>            
+                            </div>
                         </div> `;
                  });
+                 /*
                     mapsHTML += `
                     <div class="card">
-                        <img src="https://raw.githubusercontent.com/GreenXpqser/Viper-Lineups/main/images/Loading_Screen_Placeholder.png"/>
+                        <img src="images/Loading_Screen_Placeholder.png"/>
                     </div>
                     `;
+
+                    //placeholder if new map comes
+                */
                  return mapsHTML;
                }
                $('.cards').html(displayMaps());
@@ -164,21 +76,34 @@
         </script>
     </head>
     <body>
+
         <header>
+            <div class="viperInfo">
+                <a style="text-decoration: none; color: #00FF00;" href="pages/aboutViper.html">About Viper</a>
+            </div>
             <span></span>
             <center><span class="header-title">Viper Lineups</span></center>
-            <span>v1.3</span>
+            <div style="display: inline-block; margin: 1.5vw 0 0 -8vw;">v2.09</div>
         </header>
+        <!--some line breaks -->
+        <br /><br /><br /><br />
         <section class="cards-container">
             <div class="cards">
                 <!--Epic Script-->
             </div>
         </section>
-        <footer>    
-            <div class="footer-contents">
+        <footer>
+            <div class="footer-contents1">
                 <div>Note: All lineups are made in a 16:9 screen resolution</div>
-                <div><span>By Atheris</span></div>
-            </div>            
-        </footer>        
+            </div>
+            <div class="footer-contents2">
+                <div>
+                    <a style="text-decoration: none; color: #00FF00;" href="https://docs.google.com/presentation/d/1O3un9n5tigsB5YBPb4aOZ3ylGCqxFnR8RXXfI5wAdGo/present?slide=id.g8b4144163e_0_19">Original Lineup Document</a>
+                </div>
+            </div>
+            <div class="footer-contents3">
+                <div>By Atheris</div>
+            </div>
+        </footer>
     </body>
 </html>

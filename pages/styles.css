@@ -1,0 +1,257 @@
+/* reset CSS - do not modify */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    /* font: inherit; */
+    vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}
+body {line-height: 1;}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after, q:before, q:after {
+content: '';
+content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/* end reset css for all web browser */
+
+
+/* Start Modifying CSS here: */
+html, body {
+    font-family: 'Verdana', 'Helvetica', 'Arial', sans-serif;
+    font-size: 1vw;
+    height: 100%;
+    background: url("../images/background.jpg") no-repeat scroll 50% 0 #1B120D;
+    background-size: cover;
+    overflow: hidden;
+}
+img {
+      max-width: 100%;
+      max-height: 96%;
+      min-height: 96%;
+      vertical-align: center;
+}
+a {
+    text-decoration: none;
+}
+.viper {
+    color: #00ff00;
+    font-family: Helvetica;
+    font-size: 1.75vw;
+}
+.viperImage img {
+    float: right;
+    animation: glow 0.5s infinite alternate;
+    z-index: 5;
+    position: fixed;
+    margin-left: 50vw;
+    margin-top: 1.25vw;
+}
+.viperinfo {
+    z-index: 5;
+    float: left;
+    margin-top: 4vw;
+    margin-left: 4.125vw;
+    padding: 2.5vw;
+    color: #00cc00;
+    width: 42.625vw;
+    height: 27.875vw;
+    background-color: rgba(20, 20, 2, 0.985);
+    border: 0.0625vw solid #00ff00;
+    box-shadow: rgba(0, 255, 0, 0.4) 0vw 1.875vw 5.625vw;
+    overflow: hidden;
+    position: fixed;
+    line-height: 1.5625vw;
+    max-width: 100%;
+    max-height: 100%;
+}
+@keyframes glow {
+    from {
+        -webkit-filter: drop-shadow(0vw 0.625vw -0.625vw #00ff00);
+        filter: drop-shadow(0vw 0.625vw -0.625vw #00ff00);
+    }
+    to {
+        -webkit-filter: drop-shadow(0vw 0.625vw 0.625vw #00ff00);
+        filter: drop-shadow(0vw 0.625vw 0.625vw #00ff00);
+    }
+}
+/* smoke animation from: https://codepen.io/wikyware-net/pen/GRrMdZO */
+.ag-format-container {
+    width: 69.8125vw;
+    margin: 0 auto;
+}
+.ag-smoke-block {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.ag-smoke_smoke-1-1 {
+    width: 20.25vw;
+    height: 15.125vw;
+    background-image: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/smoke/images/smoke-1-1.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 50%;
+}
+.ag-smoke_smoke-1-2 {
+    background-image: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/smoke/images/smoke-1-2.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 40.25vw;
+    width: 85.5vw;
+    z-index: 4;
+    position: absolute;
+
+    -webkit-transition: margin-bottom 0.5s ease;
+    transition: margin-bottom 0.5s ease;
+}
+.ag-smoke_smoke_box {
+    height: 18.5625vw;
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+}
+.ag-smoke_smoke-2 {
+    height: 18.5625vw;
+    width: 120vw;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.ag-smoke_smoke-2-1 {
+    background: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/smoke/images/smoke-2-1.png),
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.ag-smoke_smoke-2-2 {
+    background-image: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/smoke/images/smoke-2-2.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.ag-smoke_smoke-2-3 {
+    background-image: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/smoke/images/smoke-2-3.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.ag-smoke_smoke-2-4 {
+    background-image: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/smoke/images/smoke-2-4.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.ag-smoke_smoke-2-5 {
+    background-image: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/smoke/images/smoke-2-5.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.ag-smoke_smoke-2-6 {
+    background-image: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/smoke/images/smoke-2-6.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.ag-smoke_smoke-1-1 {
+    z-index: 4;
+
+    -webkit-animation: an-smoke-anim-1 20s ease 0s normal none infinite running;
+    animation: an-smoke-anim-1 20s ease 0s normal none infinite running;
+}
+.ag-smoke_smoke-1-2 {
+    -webkit-animation: an-smoke-anim-1 15s ease -7s normal none infinite running;
+    animation: an-smoke-anim-1 15s ease -7s normal none infinite running;
+}
+.ag-smoke_smoke-2-1 {
+    -webkit-animation: an-smoke-anim-2 25s ease -4s normal none infinite running;
+    animation: an-smoke-anim-2 25s ease -4s normal none infinite running;
+}
+.ag-smoke_smoke-2-2 {
+    -webkit-animation: an-smoke-anim-2 25s ease -8s normal none infinite running;
+    animation: an-smoke-anim-2 25s ease -8s normal none infinite running;
+}
+.ag-smoke_smoke-2-3 {
+    -webkit-animation: an-smoke-anim-2 25s ease -12s normal none infinite running;
+    animation: an-smoke-anim-2 25s ease -12s normal none infinite running;
+}
+.ag-smoke_smoke-2-4 {
+    -webkit-animation: an-smoke-anim-2 25s ease -16s normal none infinite running;
+    animation: an-smoke-anim-2 25s ease -16s normal none infinite running;
+}
+.ag-smoke_smoke-2-5 {
+    -webkit-animation: an-smoke-anim-2 25s ease -20s normal none infinite running;
+    animation: an-smoke-anim-2 25s ease -20s normal none infinite running;
+}
+.ag-smoke_smoke-2-6 {
+    -webkit-animation: an-smoke-anim-2 25s ease -24s normal none infinite running;
+    animation: an-smoke-anim-2 25s ease -24s normal none infinite running;
+}
+@keyframes an-smoke-anim-1 {
+    0% {
+        opacity: 1;
+
+        -webkit-transform: scale(1) translateY(-0.4375vw);
+        transform: scale(1) translateY(-0.4375vw);
+    }
+    25% {
+        opacity: 0.85;
+
+        -webkit-transform: scale(1) translate(0.875vw);
+        transform: scale(1) translate(0.875vw);
+    }
+    50% {
+        opacity: 0.7;
+
+        -webkit-transform: scale(1) translateY(0.4375vw);
+        transform: scale(1) translateY(0.4375vw);
+    }
+    75% {
+        opacity: 0.85;
+
+        -webkit-transform: scale(1) translate(-0.875vw);
+        transform: scale(1) translate(-0.875vw);
+    }
+    to {
+        opacity: 1;
+
+        -webkit-transform: scale(1) translateY(-0.4375vw);
+        transform: scale(1) translateY(-0.4375vw);
+    }
+}
+
+@keyframes an-smoke-anim-2 {
+    0% {
+        opacity: 1;
+
+        -webkit-transform: scale(1) translate(-0.875vw);
+        transform: scale(1) translate(-0.875vw);
+    }
+    25% {
+        opacity: 0.85;
+
+        -webkit-transform: scale(1) translate(0.875vw);
+        transform: scale(1) translate(0.875vw);
+    }
+    50% {
+        opacity: 0.7;
+
+        -webkit-transform: scale(1) translate(-0.875vw);
+        transform: scale(1) translate(-0.875vw);
+    }
+    75% {
+        opacity: 0.85;
+
+        -webkit-transform: scale(1) translate(0.875vw);
+        transform: scale(1) translate(0.875vw);
+    }
+    to {
+        opacity: 1;
+
+        -webkit-transform: scale(1) translate(-0.875vw);
+        transform: scale(1) translate(-0.875vw);
+    }
+}
