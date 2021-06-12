@@ -5,13 +5,46 @@
         <link rel="shortcut icon" type="image/png" href="../images/favicon.ico" />
         <meta charset="utf-8" />
         <title>Icebox</title>
+        <!-- JQuery script -->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript">
+            $(function(){
+
+                //declare an array
+                var lineupsListData = [
+                    {
+                        lineupName: 'lineup1',
+                        lineupPos: 'top: ' + '' + 'vw;' + ' left: ' + '' + 'vw;',
+                        lineupType: '',
+                        lineupLink: 'icebox/1/lineup1.html',
+                    },
+                ];
+
+
+                var displayLineups = function(activeSched){
+                    var lineupsHTML =
+                    `<div class="mapImg">
+                        <img src="../images/icebox.png" alt="iceboxMap" />
+                    </div>`;
+                    // for every lineup, display each
+                    $.each(lineupsListData, function(i, val){
+                        lineupsHTML += `
+                            <p>
+                                <a class="lineup hvr-grow hvr-glow" style="${lineupsListData[i].lineupPos}" href="${lineupsListData[i].lineupLink}">${lineupsListData[i].lineupType}</a>
+                            </p>`;
+                 });
+                 return lineupsHTML;
+               }
+               $('.containerMain').html(displayLineups());
+               });
+        </script>
     </head>
     <body>
         <section class="main">
             <div class="column">
                 <div class="sidebar">
                     <div class="rows">
-                        <p class="mapName"><a href="../index.html">ICEBOX</a></p>
+                        <p class="mapName hvr-glow"><a href="../index.html">Icebox</a></p>
                         <div class="version">v2.09</div>
                     </div>
                     <!--divs to push the table-->
@@ -39,17 +72,13 @@
                                 <td><span class="tba1">■</span><span class="tba2">■</span></td>
                                 <td>To Be Added</td>
                             </tr>
-                            <tr>
-                                <!-- invisible character-->
-                                <td><span>‎‏‏‎ ‎</span></td>
-                            </tr>
                         </table>
                     </div>
                 </div>
             </div>
             <div class="column">
-                <div class="mapImg">
-                    <img src="../images/icebox.png" alt="iceboxMap" />
+                <div class="containerMain">
+
                 </div>
             </div>
             <div class="column">
@@ -66,14 +95,14 @@
                             </div>
                         </div>
                         <div class="two-buttons">
-                            <span class="boxSplit1 box-color1">
-                                <span class="parent">
-                                    <span class="child">
-                                        <a href="#">TOXIC<br />SCREEN</a>
+                                <span class="boxSplit1 box-color1 hvr-glow">
+                                    <span class="parent">
+                                            <span class="child">
+                                                <a href="#">TOXIC<br />SCREEN</a>
+                                            </span>
                                     </span>
                                 </span>
-                            </span>
-                            <span class="boxSplit2 box-color3">
+                            <span class="boxSplit2 box-color3 hvr-glow ">
                                 <span class="parent">
                                     <span class="child">
                                         <a class="text-yellowgreen" href="#">VIPER'S<br />PIT</a>
