@@ -22,19 +22,6 @@ table {
 /* end reset css for all web browser */
 
 /* Start Modifying CSS here: */
-#container {
-
-}
-@media only screen and (orientation:portrait){
-  #container {
-   height: 100vw;
-   -webkit-transform: rotate(90deg);
-   -moz-transform: rotate(90deg);
-   -o-transform: rotate(90deg);
-   -ms-transform: rotate(90deg);
-   transform: rotate(90deg);
-  }
-}
 body {
     color: #00ff00;
     font-family: 'Helvetica', 'Arial', sans-serif;
@@ -193,7 +180,7 @@ td {
     display: inline-block;
     vertical-align: middle;
     transform: translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    box-shadow: 0 0 0.078125vw rgba(0, 0, 0, 0);
     backface-visibility: hidden;
     -moz-osx-font-smoothing: grayscale;
     transition-duration: 0.3s;
@@ -207,8 +194,8 @@ td {
 .hvr-glow {
   display: inline-block;
   vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
+  -webkit-transform: perspective(0.078125vw) translateZ(0);
+  transform: perspective(0.078125vw) translateZ(0);
   -webkit-filter: drop-shadow(0vw 0vw -0.15vw #00ff00);
   filter: drop-shadow(0vw 0vw -0.15vw #00ff00);
   -webkit-transition-duration: 0.3s;
