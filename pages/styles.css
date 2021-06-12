@@ -23,6 +23,19 @@ table {
 
 
 /* Start Modifying CSS here: */
+#container {
+
+}
+@media only screen and (orientation:portrait){
+  #container {
+   height: 100vw;
+   -webkit-transform: rotate(90deg);
+   -moz-transform: rotate(90deg);
+   -o-transform: rotate(90deg);
+   -ms-transform: rotate(90deg);
+   transform: rotate(90deg);
+  }
+}
 html, body {
     font-family: 'Verdana', 'Helvetica', 'Arial', sans-serif;
     font-size: 1vw;

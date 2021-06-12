@@ -22,6 +22,19 @@ table {
 /* end reset css for all web browser */
 
 /* Start Modifying CSS here: */
+#container {
+
+}
+@media only screen and (orientation:portrait){
+  #container {
+   height: 100vw;
+   -webkit-transform: rotate(90deg);
+   -moz-transform: rotate(90deg);
+   -o-transform: rotate(90deg);
+   -ms-transform: rotate(90deg);
+   transform: rotate(90deg);
+  }
+}
 body {
     color: #00ff00;
     font-family: 'Helvetica', 'Arial', sans-serif;
