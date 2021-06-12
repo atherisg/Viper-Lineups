@@ -22,20 +22,17 @@ table {
 /* end reset css for all web browser */
 
 /* Start Modifying CSS here: */
-html {
-    height: 100%;
-}
 body {
-    min-height: 100%;
     color: #00ff00;
     font-family: 'Helvetica', 'Arial', sans-serif;
+    font-size: 1vw;
     background: #181818;
-    margin: 0 auto;
-    height: 100%;
+
+    min-height: 100%;
+    max-height: 100%;
+    overflow: visible;
 }
 section {
-    width: 100%;
-    height: 100%;
     margin: 0 auto; /* to center the BOX CONTAINER  */
     /*padding: 2px;  add padding */
     /*outline: solid 5px red;*/
@@ -51,36 +48,45 @@ a {
 }
 .main {
     display: grid; /* grid layout for easy layout-ing*/
-    grid-template-columns: 1fr 3fr 1fr; /* 3 Columns, fr means fraction, */
-    column-gap: 1px;
+    grid-template-columns: 1fr 3fr 1fr; /* 4 Columns, fr means fraction, */
 }
 /*
 .column {
-                outline: solid 1px #0DBB10;
-}
-*/
+    outline: solid 0.1vw #0DBB10;
+}*/
 .sidebar {
     height: 100%;
     width: 100%;
     display: grid;
-    grid-template-rows: 2fr 3fr 1fr;
+    grid-template-rows: 1fr 0.95fr 1fr;
 }
 /*.sidebar div{
                 outline: solid 1px blue;
             }
-            */
+*/
+.containerMain {
+    position: relative;
+}
+.lineup {
+    text-decoration: none; font-size: 1.5vw;
+    position: absolute;
+}
 .mapImg img{
-    width: 80%;
+    width: 83%;
     opacity: 0.5;
     display: block;
-    margin: 0 auto;
+    margin: -5vw auto;
+    padding-top: 3vw;
     object-fit: cover;
 }
 .rows {
-    margin: 12px 0px 0px 12px;
+    margin: 0.78125vw 0vw 0vw 0.78125vw;
+}
+td {
+    font-size: 1.1vw;
 }
 .boxes {
-    margin: 12px 0px 0px 12px;
+    margin: 0.78125vw 0vw 0vw 0.78125vw;
     font-weight: 900;
     line-height: 1.1;
 }
@@ -93,16 +99,14 @@ a {
 }
 .mapName {
     font-weight: bold;
-    font-size: 42px;
+    font-size: 3vw;
     text-decoration: underline;
 }
 .version {
-    font-size: 30px;
+    font-size: 2.34375vw;
 }
 .legend {
-    font-size: 19px;
-    font-weight: bold;
-    width: 100%;
+    font-size: 1.484375vw;
     text-align: center;
 }
 .legend td:first {
@@ -110,7 +114,7 @@ a {
 }
 .legend td:nth-child(2) {
     text-align: justify;
-    padding-left: 12px;
+    padding-left: 0.9375vw;
 }
 .tba1 {
     color: red;
@@ -125,34 +129,36 @@ a {
     position: absolute;
     bottom: 0;
     right: 0;
-    padding: 0px 12px 12px 0px;
+    padding: 0vw 0.9375vw 0.9375vw 0vw;
 }
 .box {
     width: 94%;
-    height: 50px;
+    height: 3.90625vw;
     display: table;
-    margin-bottom: 8px;
+    margin-bottom: 0.625vw;
 }
 .boxSplit1 {
-    width: 95%;
-    height: 50px;
+    width: 55%;
+    height: 3.90625vw;
     display: table;
-    margin-bottom: 8px;
+    margin-bottom: 0.625vw;
+    padding: 0vw 1.60vw 0vw 1.60vw;
 }
 .boxSplit2 {
-    width: 85%;
-    height: 50px;
+    width: 55%;
+    height: 3.90625vw;
     display: table;
-    margin-bottom: 8px;
+    margin-bottom: 0.625vw;
+    padding: 0vw 1.60vw 0vw 1.60vw;
 }
 .box-color1 {
-    border: 4px solid #00ff00;
+    border: 0.3125vw solid #00ff00;
 }
 .box-color2 {
-    border: 4px solid green;
+    border: 0.3125vw solid green;
 }
 .box-color3 {
-    border: 4px solid greenyellow;
+    border: 0.3125vw solid greenyellow;
 }
 .parent {
     width: 100%;
@@ -167,8 +173,5 @@ a {
 .two-buttons {
     display: grid;
     grid-template-columns: 1fr 1fr;
-}
-.two-buttons span {
-    padding-left: 3px;
-    padding-right: 3px;
+    overflow: hidden;
 }
