@@ -58,7 +58,7 @@ a {
     height: 100%;
     width: 100%;
     display: grid;
-    grid-template-rows: 1fr 0.95fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
 }
 /*.sidebar div{
                 outline: solid 1px blue;
