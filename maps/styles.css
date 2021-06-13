@@ -23,14 +23,13 @@ table {
 
 /* Start Modifying CSS here: */
 html {
-    overflow-y: hidden;
+    overflow: hidden;
 }
 body {
     color: #00ff00;
     font-family: 'Helvetica', 'Arial', sans-serif;
     font-size: 1vw;
     background: #181818;
-
     min-height: 100%;
     max-height: 100%;
     overflow: visible;
@@ -52,30 +51,37 @@ a {
 .main {
     display: grid; /* grid layout for easy layout-ing*/
     grid-template-columns: 1fr 3fr 1fr; /* 4 Columns, fr means fraction, */
-    height: 100%;
+    height: 100vh;
 }
-
 .column {
+
     outline: solid 0.1vw #0DBB10;
-    height: 100%;
+height: 100vh;
 }
 .sidebar {
-    height: 100%;
+    height: 100vh;;
     width: 100%;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
 }
-/*.sidebar div{
+
+.sidebar div {
                 outline: solid 1px blue;
-            }
-*/
+}
+
 .containerMain {
-    position: relative;
-    overflow: inherit;
+    position: sticky;
+    outline: solid 0.1vw green;
+    height: 100vh;
 }
 .lineup {
-    text-decoration: none; font-size: 1.5vw;
+    text-decoration: none;
+    font-size: 1.5vw;
     position: absolute;
+    margin-bottom: 0.78125vw
+}
+.mapImg {
+height: 100vh;
 }
 .mapImg img{
     width: 83%;
@@ -85,8 +91,7 @@ a {
     object-fit: cover;
 }
 .rows {
-    margin: 0.78125vw 0vw 0vw 0.78125vw;
-    padding-bottom: 0.78125vw;
+    margin: 0.78125vw 0vw 0.5vw 0.78125vw;
 }
 td {
     font-size: 1.1vw;
@@ -113,7 +118,9 @@ td {
 }
 .legend {
     font-size: 1.484375vw;
-    text-align: center;
+    bottom: 0;
+    position: absolute;
+    margin-bottom: 0.78125vw;
 }
 .legend td:first {
     text-align: center;
@@ -128,23 +135,11 @@ td {
 .tba2 {
     color: darkred;
 }
-.lineups {
-    position: relative;
-}
 .lineups span {
     position: absolute;
     bottom: 0;
     right: 0;
     margin: 0vw 0.9375vw 0.9375vw 0vw;
-}
-.legendR {
-    position: relative;
-}
-.legendR table {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    margin: 0vw 0vw 0.9375vw 0vw;
 }
 .box {
     width: 94%;
