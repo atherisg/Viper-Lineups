@@ -52,10 +52,12 @@ a {
 .main {
     display: grid; /* grid layout for easy layout-ing*/
     grid-template-columns: 1fr 3fr 1fr; /* 4 Columns, fr means fraction, */
+    height: 100%;
 }
 
 .column {
     outline: solid 0.1vw #0DBB10;
+    height: 100%;
 }
 .sidebar {
     height: 100%;
