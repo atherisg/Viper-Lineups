@@ -54,9 +54,10 @@ a {
     height: 100vh;
 }
 .column {
-
+    /*
     outline: solid 0.1vw #0DBB10;
-height: 100vh;
+    */
+    height: 100vh;
 }
 .sidebar {
     height: 100vh;;
@@ -64,13 +65,16 @@ height: 100vh;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
 }
-
+/*
 .sidebar div {
                 outline: solid 1px blue;
 }
+*/
 .containerMain {
     position: sticky;
+    /*
     outline: solid 0.1vw green;
+    */
     height: 100vh;
 }
 .lineup {
