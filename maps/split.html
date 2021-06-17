@@ -16,12 +16,14 @@
                         lineupName: 'lineup1',
                         lineupPos: 'top: ' + '22.3' + 'vw;' + ' left: ' + '8.8' + 'vw;',
                         lineupType: '◯',
+                        lineupSide: 'darkGreenText',
                         lineupLink: 'split/1/lineup1.html',
                     },
                     {
                         lineupName: 'lineup2',
                         lineupPos: 'top: ' + '23.09' + 'vw;' + ' left: ' + '25.3' + 'vw;',
                         lineupType: '◯',
+                        lineupSide: 'greenText',
                         lineupLink: 'split/2/lineup2.html',
                     }
                 ];
@@ -35,7 +37,7 @@
                     $.each(lineupsListData, function(i, val){
                         lineupsHTML += `
                             <p>
-                                <a class="lineup hvr-grow hvr-glow" style="${lineupsListData[i].lineupPos}" href="${lineupsListData[i].lineupLink}">${lineupsListData[i].lineupType}</a>
+                                <a class="lineup hvr-grow hvr-glow ${lineupsListData[i].lineupSide}" style="${lineupsListData[i].lineupPos}" href="${lineupsListData[i].lineupLink}">${lineupsListData[i].lineupType}</a>
                             </p>`;
                  });
                  return lineupsHTML;

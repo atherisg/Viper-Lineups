@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
     <head>
         <link rel="stylesheet" href="../styles.css" />
-
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
         <link rel="shortcut icon" type="image/png" href="../../../images/favicon.ico" />
         <meta charset="utf-8" />
         <title>Split</title>
@@ -11,26 +11,6 @@
             <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
             <script src="../../../prerequisites/fancybox/dist/jquery.fancybox.min.js"></script>
         <script type="text/javascript">
-            $('[data-fancybox="gallery1"]').fancybox({
-            	thumbs : {
-            		autoStart : true
-            	}
-            });
-            $('[data-fancybox="gallery2"]').fancybox({
-            	thumbs : {
-            		autoStart : true
-            	}
-            });
-            $('[data-fancybox="gallery3"]').fancybox({
-            	thumbs : {
-            		autoStart : true
-            	}
-            });
-            $('[data-fancybox="gallery4"]').fancybox({
-            	thumbs : {
-            		autoStart : true
-            	}
-            });
         </script>
     </head>
     <body>
@@ -41,8 +21,16 @@
                     <div class="staticText leftAlign underlined"> <!-- column one -->
                         <a href="../../../maps/split.html" class="hvr-glow" style="font-size: 1.8vw; display: block; text-align: left; ">SPLIT</a>
                     </div>
-                    <div class="staticText">ATK</div><!-- column two -->
-                    <div class="staticText whiteText">LINEUP NAME</div><!-- column three -->
+                    <div class="staticText darkGreenText">DEF</div><!-- column two -->
+                    <div class="staticText whiteText" style="font-weight: 100; font-family: Montserrat;">
+                        <i style="font-weight: 900;">
+                            Poison Cloud:
+                        </i>
+                        <a class="greenText" style="font-weight: 900;">
+                            &nbsp;B Garage One Way
+                        </a>
+                            &nbsp;from B Site
+                    </div><!-- column three -->
                 </div>
                 <!-- end row one -->
 
@@ -51,26 +39,34 @@
                         <div class="bordered-box staticText whiteText">
                             <span>POSITIONING</span>
                         </div>
-                        <div class="text1 staticText whiteText">
-                            <span>INSTRUCTION 1</span>
+                        <div class="text1 staticText whiteText" style="line-height: 2vw; margin-top: 1vw;">
+                            <span>
+                                Stand at this T intersection at B Site
+                            <span>
                         </div>
                     </div>
                     <div class="rowImg"><!-- row two column two -->
                         <!--first instruction-->
-                            <a class="columnImg hvr-glow" data-fancybox="gallery1" href="../../../images/Loading_Screen_Haven.png">
-                                <img src="../../../images/Loading_Screen_Haven.png" style="width:100%; cursor: zoom-in" alt="instruction1"/>
+                            <a class="columnImg hvr-glow" data-fancybox="gallery1" href="1.png">
+                                <img src="1.png" style="width:100%; cursor: zoom-in" alt="instruction1"/>
                             </a>
+                            <a class="columnImg hvr-glow" data-fancybox="gallery1" href="2.png" style="display: none;">
+                                <img src="2.png" style="width:100%; cursor: zoom-in; display: none;" alt="instruction1"/>
+                            </a>
+
+                            <!--
                             <a data-fancybox="gallery1" href="#video1" style="display: none;">
                                 HTML5 video element
                             </a>
                             <video width="84.375vw" height="312.1951219512195vh" controls id="video1" style="display: none;">
                                 <source src="videoTest.mp4" type="video/mp4">
                                     Your browser doesn't support HTML5 video tag.
-                            </video>
+                            </video>-->
+
                         <!--end of first instruction-->
                         <!--second instruction-->
-                            <a class="columnImg hvr-glow" data-fancybox="gallery2" href="../../../images/Loading_Screen_Split.png">
-                                <img src="../../../images/Loading_Screen_Split.png" style="width:100%; cursor: zoom-in" alt="instruction2"/>
+                            <a class="columnImg hvr-glow" data-fancybox="gallery2" href="3.png">
+                                <img src="3.png" style="width:100%; cursor: zoom-in" alt="instruction2"/>
                             </a>
                         <!--second instruction-->
                     </div>
@@ -78,26 +74,28 @@
             </section>
             <section class="section-two">
                 <div class="div-tbltwo-row-one">
-                    <div class="staticText leftAlign whiteText">DIFFICULTY:</div>
-                    <div class="staticText leftAlign whiteText">JUMP:</div>
-                    <div class="staticText leftAlign whiteText">RUNNING:</div>
-                    <div class="staticText leftAlign whiteText">TOSS:</div>
+                    <div class="staticText leftAlign whiteText">DIFFICULTY: <a class="greenText">EASY</a></div>
+                    <div class="staticText leftAlign whiteText">JUMP: <a class="redText">✕</a></div>
+                    <div class="staticText leftAlign whiteText">RUNNING: <a class="redText">✕</a></div>
+                    <div class="staticText leftAlign whiteText">TOSS: <a class="redText">✕</a></div>
                     <div class="staticText whiteText">RESULT</div>
                 </div>
                 <div class="div-tbltwo-row-two">
                     <div>
-                        <div class="text1 staticText whiteText">
-                            <span>INSTRUCTION 2</span>
+                        <div class="text1 staticText whiteText" style="line-height: 2vw;">
+                            <span>
+                                Aim at this spot just below the bottom right corner of the left light bar aligned to the gap between the cables
+                            </span>
                         </div>
                         <div>
                         </div>
                 </div>
                     <div class="rowImg">
-                        <a class="columnImg hvr-glow" data-fancybox="gallery3" href="../../../images/Loading_Screen_Ascent.png">
-                            <img src="../../../images/Loading_Screen_Ascent.png" style="width:100%; cursor: zoom-in" alt="instruction3"/>
+                        <a class="columnImg hvr-glow" data-fancybox="gallery3" href="4.png">
+                            <img src="4.png" style="width:100%; cursor: zoom-in" alt="instruction3"/>
                         </a>
-                        <a class="columnImg hvr-glow" data-fancybox="gallery4" href="../../../images/Loading_Screen_Bind.png">
-                            <img src="../../../images/Loading_Screen_Bind.png" style="width:100%; cursor: zoom-in" alt="result"/>
+                        <a class="columnImg hvr-glow" data-fancybox="gallery4" href="5.png">
+                            <img src="5.png" style="width:100%; cursor: zoom-in" alt="result"/>
                         </a>
                     </div>
                 </div>

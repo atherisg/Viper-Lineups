@@ -83,6 +83,15 @@ a {
     position: absolute;
     margin-bottom: 0.78125vw;
 }
+.greenText {
+    color: #00ff00;
+}
+.darkGreenText {
+    color: green;
+}
+.redText {
+    color: #ff0000;
+}
 .mapImg {
     height: 100vh;
 }

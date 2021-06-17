@@ -23,7 +23,7 @@ table {
 
 body{
    color: #00FF00;
-   font-family: 'Helvetica', 'Arial', sans-serif;
+   font-family: 'Helvetica', 'Montserrat', 'Arial', sans-serif;
    font-size: 1vw;
    font-weight: lighter;
    background: #181818;
@@ -39,8 +39,17 @@ a{
    font-weight: 700;
    font-size: 1.2vw;
 }
-.whiteText{
-   color:white;
+.whiteText {
+   color: white;
+}
+.greenText {
+    color: #00ff00;
+}
+.darkGreenText {
+    color: green;
+}
+.redText {
+    color: #ff0000;
 }
 .div-tblone-row-one{
    display: grid;
@@ -64,7 +73,7 @@ a{
 .div-tbltwo-row-one{
    margin-top: 1.171875vw;
    display: grid;
-   grid-template-columns: 3fr 1fr 1.25fr 1fr 5fr;
+   grid-template-columns: 4.75fr 1.5fr 1.75fr 1.5fr 4.65fr;
    text-align: center;
    place-content: center;
    line-height: 3.125vw;
@@ -97,6 +106,7 @@ a{
    place-content: center;
    line-height: 3.125vw;
    padding-left: 1.171875vw;
+   font-weight: lighter;
 }
 .leftAlign{
    text-align: left;
